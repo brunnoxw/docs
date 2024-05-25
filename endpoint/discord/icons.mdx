@@ -1,12 +1,12 @@
 ---
 title: "icons"
-api: "GET http://147.rest/icons?tipo=aleatorios&quantidade=10"
+api: "GET https://147.rest/icons?tipo=aleatorios&quantidade=10"
 description: "Pega as informações do usuário do discord pelo seu ID."
 ---
 
 ### Headers
 
-<ParamField header="X-API_key" type="string" required>
+<ParamField header="X-API_KEY" type="string" required>
 	Enviar, em cada request, a sua API KEY no cabeçalho pedido
 </ParamField>
 
@@ -59,7 +59,7 @@ description: "Pega as informações do usuário do discord pelo seu ID."
 ```json Sucesso false
 {
    "erro":"Parâmetros faltando.",
-   "exemplo":"http://localhost/icons?tipo=aleatorios&quantidade=10",
+   "exemplo":"https://147.rest/icons?tipo=aleatorios&quantidade=10",
    "tipos":[
       "aleatorios",
       "casal",
