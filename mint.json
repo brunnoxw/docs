@@ -1,0 +1,60 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "147.rest",
+  "logo": "/fav.png",
+  "favicon": "/fav.png",
+  "colors": {
+    "primary": "#4012AB",
+    "light": "#8F62E5",
+    "dark": "#4012AB",
+    "anchors": {
+      "from": "#161236",
+      "to": "#4012ab"
+    }
+  },
+  "modeToggle": {
+    "default": "dark"
+  },
+  
+  "topbarCtaButton": {
+    "name": "Dashboard",
+    "url": "https://147.rest/"
+  },
+  "anchors": [
+    {
+      "name": "Faça login",
+      "icon": "clipboard",
+      "url": "https://147.rest/"
+    }
+  ],
+  
+  "navigation": [
+    {
+      "group": "Home",
+      "pages": [
+        "intro"
+      ]
+    },
+    {
+      "group": "API",
+      "pages": [
+        "endpoint/auth"
+      ]
+    },
+    {
+      "group": "Endpoints",
+      "pages": [
+        "endpoint/discord/user",
+        "endpoint/discord/icons"
+          ]
+    }
+  ],
+  "backgroundImage": "/background.png",
+  "footerSocials": {
+    "instagram": "https://www.instagram.com/147.wtf/",
+    "discord": "https://discord.gg/147"
+  }
+}
+
+
+

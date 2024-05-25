@@ -1,0 +1,75 @@
+---
+title: "icons"
+api: "GET http://147.rest/icons?tipo=aleatorios&quantidade=10"
+description: "Pega as informações do usuário do discord pelo seu ID."
+---
+
+### Headers
+
+<ParamField header="X-API_key" type="string" required>
+	Enviar, em cada request, a sua API KEY no cabeçalho pedido
+</ParamField>
+
+### Query
+<ParamField query="tipo" type="string" placeholder="aleatorios" required>
+	Categoria de icones
+</ParamField>
+<ParamField query="quantidade" type="number" placeholder="10" required>
+	Quantidade de icones que vai retornar
+</ParamField>
+### Status
+
+<ResponseField name="200" type="number">
+	Retorna `200` se tudo der certo.
+</ResponseField>
+<ResponseField name="400" type="number">
+	Retorna `400` para Parâmetro faltando;
+</ResponseField>
+<ResponseField name="422" type="number">
+	Retorna `422` para parametro inválido.
+</ResponseField>
+
+<ResponseField name="sucesso" type="boolean">
+	Retorna `true` para sucesso e `false` para erro.
+</ResponseField>
+<ResponseField name="erro" type="string">
+	Retorna a mensagem do erro
+</ResponseField>
+<ResponseExample>
+
+```json Sucesso true
+{
+   "sucesso":true,
+   "links":[
+      "https://i.ibb.co/qBj3YgX/d5a1916020600e14c2.jpg",
+      "https://i.ibb.co/QKHdLdY/cd929dc8657a2bb8f7.jpg",
+      "https://i.ibb.co/4SWDmDH/111f4199afad808301.jpg",
+      "https://i.ibb.co/THTrBCS/93828995417a4d47a5.jpg",
+      "https://i.ibb.co/Nnnvdsn/f8c8e4eda0324a0814.jpg",
+      "https://i.ibb.co/DtqwvXB/e2ab1524536e0e9ad5.jpg",
+      "https://i.ibb.co/SydyNQM/861375b77c7b661f30.jpg",
+      "https://i.ibb.co/vXBNwdr/52ab25c814f7c3b46f.jpg",
+      "https://i.ibb.co/HFcfN03/47a594b6775997e00e.jpg",
+      "https://i.ibb.co/TbYVwWC/af5923ac0bda9bd9ce.jpg"
+   ],
+   "status":200
+}
+```
+
+```json Sucesso false
+{
+   "erro":"Parâmetros faltando.",
+   "exemplo":"http://localhost/icons?tipo=aleatorios&quantidade=10",
+   "tipos":[
+      "aleatorios",
+      "casal",
+      "facelessboy",
+      "hariel",
+      "kevin",
+      "spvibe"
+   ],
+   "status":400
+}
+```
+
+</ResponseExample>

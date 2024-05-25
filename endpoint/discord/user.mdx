@@ -1,0 +1,101 @@
+---
+title: "user"
+api: "GET http://localhost/user?id=687022032726392839"
+description: "Pega as informações do usuário do discord pelo seu ID."
+---
+
+### Headers
+
+<ParamField header="X-API_key" type="string" required>
+	Enviar, em cada request, a sua API KEY no cabeçalho pedido
+</ParamField>
+### Query
+<ParamField query="id" type="number" placeholder="687022032726392839" required>
+	Coloque o id do usuário
+</ParamField>
+### Status
+
+<ResponseField name="200" type="number">
+	Retorna `200` se tudo der certo.
+</ResponseField>
+<ResponseField name="400" type="number">
+	Retorna `400` para Parâmetro faltando;
+</ResponseField>
+<ResponseField name="422" type="number">
+	Retorna `422` para parametro inválido.
+</ResponseField>
+
+<ResponseField name="sucesso" type="boolean">
+	Retorna `true` para sucesso e `false` para erro.
+</ResponseField>
+<ResponseField name="erro" type="string">
+	Retorna a mensagem do erro
+</ResponseField>
+<ResponseExample>
+
+```json Response OK
+{
+   "status":"OK",
+   "info":{
+      "esta_no_servidor":true,
+      "device":[
+         "desktop"
+      ],
+      "username":"grcw",
+      "id":"687022032726392839",
+      "global_name":null,
+      "user_status":"https://ik.imagekit.io/4n3hscd51et/idleIcon_-qezW2kP5.png",
+      "avatar":"https://cdn.discordapp.com/avatars/687022032726392839/d0da7dcb08873434ba1e320f5fb7285e.png?size=4096",
+      "spotify":{
+         "nome":"Spotify",
+         "tipo":2,
+         "detalhe":"Give Me Everything (feat. Nayer)",
+         "state":"Pitbull; AFROJACK; Ne-Yo; Nayer",
+         "emoji":null,
+         "timestamps":{
+            "start":"2024-05-25T19:15:12.931Z",
+            "end":"2024-05-25T19:19:25.237Z"
+         },
+         "assets":{
+            "grande":"https://i.scdn.co/image/ab67616d0000b2731dc7483a9fcfce54822a2f19",
+            "pequena":"https://i.imgur.com/c0V1seS.png"
+         },
+         "buttons":[
+            
+         ],
+         "inicio":1716664527557
+      },
+      "hang":null,
+      "outras_atividades":[
+         {
+            "nome":"Roblox",
+            "tipo":null,
+            "detalhe":null,
+            "state":null,
+            "emoji":null,
+            "timestamps":{
+               "start":"2024-05-25T16:56:12.810Z",
+               "end":null
+            },
+            "assets":{
+               "grande":"https://i.imgur.com/c0V1seS.png",
+               "pequena":"https://i.imgur.com/c0V1seS.png"
+            },
+            "buttons":[
+               
+            ],
+            "inicio":1716656177821
+         }
+      ]
+   }
+}
+```
+
+```json Response falha
+{
+  "status": 422,
+  "erro": "Parâmetro `ID` faltando.",
+}
+```
+
+</ResponseExample>
